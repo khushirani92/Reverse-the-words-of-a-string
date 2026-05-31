@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse String</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            text-align:center;
+            background: linear-gradient(
+                to bottom,
+                orange,
+                white,
+                green
+            );
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .box{
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            width:500px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            color:darkblue;
+            margin-bottom:20px;
+        }
+
+        button{
+            padding:10px 20px;
+            background:darkblue;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        #output{
+            margin-top:20px;
+            font-size:20px;
+            color:green;
+            font-weight:bold;
+        }
+
+        .logic{
+            margin-top:25px;
+            text-align:left;
+            background:#f4f4f4;
+            padding:15px;
+            border-radius:10px;
+            line-height:1.8;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Reverse String </h1>
+
+        <p>
+            Original String:
+            <b>I love my India</b>
+        </p>
+
+        <button onclick="reverseText()">
+            Reverse String
+        </button>
+
+        <div id="output"></div>
+
+        <div class="logic">
+
+            <h3>Logic Used:</h3>
+
+            1. <b>split(" ")</b> → Converts sentence into array.<br>
+
+            Example:<br>
+            ["I", "love", "my", "India"]<br><br>
+
+            2. <b>reverse()</b> → Reverses the array.<br>
+
+            Example:<br>
+            ["India", "my", "love", "I"]<br><br>
+
+            3. <b>join(" ")</b> → Joins array into sentence.<br>
+
+            Final Output:<br>
+            <b>India my love I</b>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function reverseText(){
+
+            let str = "I love my India";
+
+            let result =
+            str.split(" ").reverse().join(" ");
+
+            document.getElementById("output").innerHTML =
+            result;
+        }
+
+    </script>
+
+</body>
+</html>
